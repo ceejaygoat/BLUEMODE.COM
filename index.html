@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluemode - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to External CSS for animation libraries like Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="script.js" defer></script> <!-- Optional for interactive features -->
+</head>
+<!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 18740775;
+    window.__lc.integration_name = "manual_onboarding";
+    window.__lc.product_name = "livechat";
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechat.com/chat-with/18740775/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <h1>Bluemode</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="animate__animated animate__fadeIn">
+        <div class="hero-content">
+            <h2>Your Trusted Expert in EA Solutions</h2>
+            <p>Bluemode offers tailored solutions to help automate and enhance your trading experience.</p>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+    </section>
+<!-- Copy Trading Button -->
+<center><button onclick="location.href='license_key_generator.html';"class="license_key_generator">
+    License Keys
+</button> </center>
+
+<!-- Styling the button (CSS) -->
+<style>
+    .license_key_generator {
+        background-color: #0072ff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .license_key_generator:hover {
+        background-color: #0056b3;
+    }
+</style>
+ 
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-item animate__animated animate__fadeInUp">
+                <h3>Custom EA Development</h3>
+                <p>We develop expert advisors tailored to your unique trading needs.</p>
+            </div>
+            <div class="service-item animate__animated animate__fadeInUp delay-1s">
+                <h3>Automated Trading</h3>
+                <p>Get fully automated trading strategies that work across different platforms.</p>
+            </div>
+            <div class="service-item animate__animated animate__fadeInUp delay-2s">
+                <h3>Consulting Services</h3>
+                <p>Our team provides expert consulting to enhance your financial systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bluemode. All rights reserved.</p>
+		<footer>
+   
+    <p><a href="javascript:void(0)" id="customer-care-btn">Customer Care - Bluemode Robot</a></p>
+</footer>
+
+<!-- Chatbot Popup -->
+<div id="chatbot-container" class="chatbot-hidden">
+    <div id="chatbot-header">
+        <h4>Bluemode Robot Chatbot</h4>
+        <button id="close-chatbot">X</button>
+    </div>
+    <div id="chatbot-content">
+        <div id="chatbox">
+            <p class="bot-message">Hi! I'm the Bluemode Robot. How can I assist you with our services today?</p>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message here...">
+        <button id="send-message-btn">Send</button>
+		<script>
+    // Open chatbot when Customer Care is clicked
+    const customerCareBtn = document.getElementById('customer-care-btn');
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const closeChatbotBtn = document.getElementById('close-chatbot');
+
+    customerCareBtn.addEventListener('click', () => {
+        chatbotContainer.classList.add('chatbot-visible');
+    });
+
+    // Close chatbot
+    closeChatbotBtn.addEventListener('click', () => {
+        chatbotContainer.classList.remove('chatbot-visible');
+    });
+
+    // Simple chatbot interaction
+    const sendMessageBtn = document.getElementById('send-message-btn');
+    const chatbox = document.getElementById('chatbox');
+    const userInput = document.getElementById('user-input');
+
+    sendMessageBtn.addEventListener('click', () => {
+        const userMessage = userInput.value;
+        if (userMessage.trim()) {
+            // Add user message to chat
+            const userMessageElem = document.createElement('p');
+            userMessageElem.classList.add('user-message');
+            userMessageElem.textContent = userMessage;
+            chatbox.appendChild(userMessageElem);
+
+            // Auto scroll to the bottom
+            chatbox.scrollTop = chatbox.scrollHeight;
+
+            // Add bot response after a short delay
+            setTimeout(() => {
+                const botMessageElem = document.createElement('p');
+                botMessageElem.classList.add('bot-message');
+                botMessageElem.textContent = "Thank you for reaching out! We'll get back to you shortly.";
+                chatbox.appendChild(botMessageElem);
+
+                // Auto scroll to the bottom
+                chatbox.scrollTop = chatbox.scrollHeight;
+            }, 9000);
+
+            // Clear the input field
+            userInput.value = '';
+        }
+    });
+</script>
+ <ul>
+        <li><a href="terms-and-conditions.html" target="_blank"><font color="white">Terms and Conditions</a></li>
+        
+    </ul>
+
+    </div>
+</div>
+
+    </footer>
+</body>
+</html>
